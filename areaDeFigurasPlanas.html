@@ -1,0 +1,191 @@
+<HTML><HEAD>
+	<TITLE>areaDeFigurasPlanas.psc</TITLE>
+	<STYLE type="text/css">
+		.SSD { color:#FFFFFF; background-color:#000000; }
+		.SS0 { color:#000000; background-color:#FFFFFF; }
+		.SS1 { color:#000000; background-color:#FFFFFF; }
+		.SS2 { font-style: italic; color:#969696; background-color:#FFFFFF; }
+		.SS3 { font-style: italic; color:#0000FF; background-color:#FFFFFF; }
+		.SS4 { color:#8E6B23; background-color:#FFFFFF; }
+		.SS5 { font-weight: bold; color:#000080; background-color:#FFFFFF; }
+		.SS6 { color:#FF0000; background-color:#FFFFFF; }
+		.SS7 { color:#FF0000; background-color:#FFFFFF; }
+		.SS8 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS9 { color:#238E23; background-color:#FFFFFF; }
+		.SS10 { font-weight: bold; color:#000000; background-color:#FFFFFF; }
+		.SS11 { color:#000000; background-color:#FFFFFF; }
+		.SS12 { color:#FF0000; background-color:#F0F0F0; }
+		.SS13 { color:#000000; background-color:#FFFFFF; }
+		.SS14 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS15 { color:#238E23; background-color:#FFFFFF; }
+		.SS16 { color:#000080; background-color:#FFFFFF; }
+		.SS17 { color:#42426F; background-color:#FFFFFF; }
+		.SS18 { color:#FF0000; background-color:#FFFFFF; }
+		.SS19 { color:#000000; background-color:#BFD8D8; }
+		.SS34 { font-weight: bold; color:#FF0000; background-color:#F0F0FF; }
+		.SS35 { font-weight: bold; color:#800000; background-color:#FFFFFF; }
+	</STYLE>
+</HEAD><BODY><PRE>
+<SPAN class="SS5">Algoritmo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">areaDeFigurasPlanas</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionMenu</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">opcionCuadrado</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRectangulo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionTriangulo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRombo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionCirculo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Caracter</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado1</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado2</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado3</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMayor</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMenor</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">radio</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Repetir</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS2">// mostrar menu</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Limpiar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Pantalla</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*  Calculadora de Perímetro/Area de Figuras Planas  *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   1: Cuadrado                                     *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   2: Rectángulo                                   *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   3: Triángulo                                    *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   4: Rombo                                        *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   5: Círculo                                      *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*   6: Salir                                        *"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS2">// ingresar una opcion</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    Elija la opción deseada por favor (1-6)"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionMenu</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS2">// procesar esa opción</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionMenu</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¿Qué desea calcular?"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    1: Perímetro del cuadrado"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    2: Area del cuadrado"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionCuadrado</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionCuadrado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0"> 
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida de uno de los lados del cuadrado en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El perímetro del cuadrado es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida de uno de los lados del cuadrado en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El área del cuadrado es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS10">↑</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm²"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¿Qué desea calcular?"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    1: Perímetro del rectángulo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    2: Area del rectángulo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRectangulo</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRectangulo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Primero ingrese la medida de la base en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Y ahora ingrese la medida de la altura en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El perímetro del rectángulo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">)</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">),</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Primero ingrese la medida de la base en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Y ahora ingrese la medida de la altura en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El área del rectángulo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm²"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS6">"3"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¿Qué desea calcular?"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    1: Perímetro del triángulo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    2: Area del triángulo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionTriangulo</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionTriangulo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida del primer lado del triángulo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado1</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida del segundo lado del triángulo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado2</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida del tercer lado del triángulo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado3</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El perímetro del triángulo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado1</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado2</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado3</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Primero ingrese la medida de la base en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Y ahora ingrese la medida de la altura en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El área del triángulo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">base</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">altura</SPAN><SPAN class="SS10">)</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">/</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm²"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS6">"4"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¿Qué desea calcular?"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    1: Perímetro del rombo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    2: Area del rombo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRombo</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionRombo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida de uno de los lados del rombo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El perímetro del rombo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS11">lado</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Primero ingrese la medida de la diagonal mayor(D) en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMayor</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Y ahora ingrese la medida de la diagonal menor(d) en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMenor</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMenor</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">≥</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMayor</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+                            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    La diagonal menor no puede ser mayor o igual a la diagonal mayor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+                            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                            </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El área del rombo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">diagonalMayor</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">diagonalMenor</SPAN><SPAN class="SS10">)</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">/</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm²"</SPAN><SPAN class="SS0">
+                            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS6">"5"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¿Qué desea calcular?"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    1: Perímetro del círculo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    2: Area del círculo"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionCirculo</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionCirculo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"1"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida del radio del círculo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">radio</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El perímetro del círculo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS16">pi</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">radio</SPAN><SPAN class="SS10">↑</SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS6">"2"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la medida del radio del círculo en cm por favor"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">radio</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Mostrar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    El área del círculo es "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS16">pi</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">*</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">radio</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">" cm²"</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*****************************************************"</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS6">"6"</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"    ¡Gracias por usar la aplicación!"</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">De</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">otro</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">modo</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingresó una opción inválida, intente nuevamente por favor"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">FinSegun</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionMenu</SPAN><SPAN class="SS10">≠</SPAN><SPAN class="SS6">"6"</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"                                           "</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Presione cualquier tecla para continuar"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Esperar</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Tecla</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Que</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">opcionMenu</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">"6"</SPAN><SPAN class="SS0">
+    
+</SPAN><SPAN class="SS5">FinAlgoritmo</SPAN><SPAN class="SS0">
+
+</SPAN>
+</PRE></BODY></HTML>
