@@ -19,21 +19,21 @@ Se utilizó un tablero Kanban en la sección de Proyectos de este repositorio en
 
 *	Todo: se incorporó la totalidad de la lista de tareas:
   
-	Crear el repositorio
+    	Crear el repositorio
 
-	Crear un proyecto en GitHub
+    	Crear un proyecto en GitHub
 
-	Elección de la aplicación a desarrollar
+    	Elección de la aplicación a desarrollar
 
-	Desarrollo del código
+    	Desarrollo del código
 
-	Diseño de interfaz de usuario
+    	Diseño de interfaz de usuario
 
-	Creación del logo
+    	Creación del logo
 
-	Documento de presentación
+    	Documento de presentación
 
-	Prueba del código
+    	Prueba del código
 
 * In Progress: se trasladó a esta columna todo aquello referente a las tareas sobre las cuales se estaban trabajando.
 
