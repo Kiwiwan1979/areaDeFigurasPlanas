@@ -17,7 +17,7 @@ Metodologías Ágiles
 1.	Metodología Kanban: se utiliza para definir, asignar y darle un seguimiento a las tareas.
 Se utilizó un tablero Kanban en la sección de Proyectos de este repositorio en el cual se crearon tres columnas:
 
-o	Todo: se incorporó la totalidad de la lista de tareas:
+*	Todo: se incorporó la totalidad de la lista de tareas:
 	Crear el repositorio
 	Crear un proyecto en GitHub
 	Elección de la aplicación a desarrollar
@@ -27,13 +27,16 @@ o	Todo: se incorporó la totalidad de la lista de tareas:
 	Documento de presentación
 	Prueba del código
 
-o	In Progress: se trasladó a esta columna todo aquello referente a las tareas sobre las cuales se estaban trabajando.
+* In Progress: se trasladó a esta columna todo aquello referente a las tareas sobre las cuales se estaban trabajando.
 
-o	Hecho: se incluyeron las tareas concretadas.
+* Hecho: se incluyeron las tareas concretadas.
 
 3.	Metodología Scrum:
 
-o	Product Backlog: se creó la lista de tareas y especificaciones a realizar donde se le dio prioridad a cada una.
-o	Sprint Planning: se calculó un período de tiempo para completar cada tarea.
-o	Sprint Review: se revisó cuales tareas de las listas se terminaron y cuales no, se analizaron los problemas surgidos y si se pudo solucionar, se hizo una demostración de las tareas que ya se finalizaron.
-o	Restrospectiva: se evaluó lo realizado, lo que se logró, y lo que se puede mejorar a partir de los inconvenientes surgidos en el desarrollo del proyecto
+*	Product Backlog: se creó la lista de tareas y especificaciones a realizar donde se le dio prioridad a cada una.
+  
+*	Sprint Planning: se calculó un período de tiempo para completar cada tarea.
+  
+* Sprint Review: se revisó cuales tareas de las listas se terminaron y cuales no, se analizaron los problemas surgidos y si se pudo solucionar, se hizo una demostración de las tareas que ya se finalizaron.
+  
+*	Restrospectiva: se evaluó lo realizado, lo que se logró, y lo que se puede mejorar a partir de los inconvenientes surgidos en el desarrollo del proyecto
