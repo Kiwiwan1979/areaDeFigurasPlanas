@@ -14,17 +14,25 @@ La siguiente aplicación deberá cumplir con los requisitos funcionales:
 
 Metodologías Ágiles
 
-1.	Metodología Kanban: se utiliza para definir, asignar y darle un seguimiento a las tareas.
+1.	Metodología Kanban: efectivo para definir, asignar y darle un seguimiento a las tareas.
 Se utilizó un tablero Kanban en la sección de Proyectos de este repositorio en el cual se crearon tres columnas:
 
 *	Todo: se incorporó la totalidad de la lista de tareas:
+  
 	Crear el repositorio
+
 	Crear un proyecto en GitHub
+
 	Elección de la aplicación a desarrollar
+
 	Desarrollo del código
+
 	Diseño de interfaz de usuario
+
 	Creación del logo
+
 	Documento de presentación
+
 	Prueba del código
 
 * In Progress: se trasladó a esta columna todo aquello referente a las tareas sobre las cuales se estaban trabajando.
