@@ -8,8 +8,11 @@ Este Proyecto fue creado por Martín Silva como una entrega final del Programa P
 Requisitos Funcionales
 
 La siguiente aplicación deberá cumplir con los requisitos funcionales:
+
 •	Permitir a mi hija calcular el perímetro y área de figuras planas.
+
 •	Ofrecer un menú que incluya el cálculo de figuras básicas como el cuadrado, el rectángulo, el triángulo, el rombo y el círculo.
+
 •	Proporcionar una interfaz de usuario intuitiva, fácil y amigable de usar para que mi hija pueda navegar y utilizar todas las funciones del sistema.
 
 Metodologías Ágiles
